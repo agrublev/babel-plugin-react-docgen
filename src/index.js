@@ -4,7 +4,7 @@ import * as ReactDocgen from 'react-docgen';
 import * as reactDocgenHandlers from 'react-docgen/dist/handlers';
 import actualNameHandler from './actualNameHandler';
 
-const defaultHandlers = Object.values(reactDocgenHandlers).map(handler => handler);
+const defaultHandlers = Object.keys(reactDocgenHandlers).map(handler => handler);
 const handlers = [...defaultHandlers, actualNameHandler]
 
 export default function({ types: t }) {
